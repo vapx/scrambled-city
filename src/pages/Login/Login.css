@@ -9,25 +9,76 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: #dcdcdc;
+  background-color: #ffffff;
+  border-radius: 15px;
   padding: 30px;
+  box-shadow: 5px 5px 5px 10px #888888;
+;
 }
 .login__textBox {
-  padding: 10px;
+  padding: 15px;
   font-size: 18px;
   margin-bottom: 10px;
+  border: 1px solid #888888;
+  border-radius: 5px;
 }
+
+.login__textBox::placeholder {
+  color: black;
+}
+  
+
 .login__btn {
   padding: 10px;
   font-size: 18px;
   margin-bottom: 10px;
   border: none;
   color: white;
-  background-color: black;
 }
+
+.login__btn-google {
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
 .login__google {
   background-color: #4285f4;
 }
 .login div {
   margin-top: 7px;
+}
+
+.left-side-screen-container {
+  height: 100vh;
+}
+
+.imgIntro {
+  background-image: url("../../assets/lock.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(19, 38, 61, 0.8);
+  animation: floatingAnimation 3s infinite;
+  height: 100vh;
+  
+}
+
+@keyframes floatingAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.left-side-screen-container h3 i{
+  color: white;
 }
