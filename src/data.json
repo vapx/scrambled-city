@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "question": "What is the capital city of Italy?",
+      "answer": "Rome"
+    },
+    {
+      "question": "What is the official language of Brazil?",
+      "answer": "Portuguese"
+    },
+    {
+      "question": "What is the currency used in Japan?",
+      "answer": "Yen"
+    },
+    {
+      "question": "What is the tallest mountain in Africa?",
+      "answer": "Mount Kilimanjaro"
+    },
+    {
+      "question": "What is the largest country in South America by area?",
+      "answer": "Brazil"
+    },
+    {
+      "question": "What is the currency used in Mexico?",
+      "answer": "Mexican peso"
+    },
+    {
+      "question": "What is the official language of Spain?",
+      "answer": "Spanish"
+    },
+    {
+      "question": "What is the smallest country in the world?",
+      "answer": "Vatican City"
+    },
+    {
+      "question": "What is the highest waterfall in the world?",
+      "answer": "Angel Falls"
+    },
+    {
+      "question": "What is the largest desert in the world?",
+      "answer": "Sahara"
+    },
+    {
+      "question": "What is the capital city of South Korea?",
+      "answer": "Seoul"
+    },
+    {
+      "question": "What is the official language of Russia?",
+      "answer": "Russian"
+    },
+    {
+      "question": "What is the currency used in Canada?",
+      "answer": "Canadian dollar"
+    },
+    {
+      "question": "What is the largest country in the world by area?",
+      "answer": "Russia"
+    },
+    {
+      "question": "What is the capital city of Brazil?",
+      "answer": "Brasília"
+    }
+  ]
+}
