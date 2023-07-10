@@ -1,9 +1,8 @@
 .login {
-  height: 100vh;
-  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 75vw;
 }
 .login__container {
   display: flex;
@@ -45,9 +44,15 @@
   border-radius: 5px;
 }
 
+.login-btn-google-icon {
+  height: 30px;
+  padding: 5px;
+}
+
 .login__google {
   background-color: #4285f4;
 }
+
 .login div {
   margin-top: 7px;
 }

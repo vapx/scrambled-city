@@ -5,13 +5,17 @@ import { auth, registerWithEmailAndPassword } from '../../config/firebase'
 import './Registration.css'
 
 function Registration() {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [user, loading] = useAuthState(auth)
   const navigate = useNavigate()
+  const [email, setEmail] = useState('')
+  const [name, setName] = useState('')
+  const [password, setPassword] = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('')
+  const [user, loading] = useAuthState(auth)
+
   const register = () => {
-    registerWithEmailAndPassword(email, password)
+    registerWithEmailAndPassword(email, password, name)
   }
+
   useEffect(
     () => {
       if (loading) return
@@ -22,6 +26,16 @@ function Registration() {
   return (
     <div className="register">
       <div className="register__container">
+        <h3 className="fw-bold">Don't have an account?</h3>
+        <p className="lead">Register Now!</p>
+
+        <input
+          type="text"
+          className="register__textBox"
+          value={name}
+          onChange={e => setName(e.target.value)}
+          placeholder="Full Name"
+        />
         <input
           type="text"
           className="register__textBox"
@@ -35,6 +49,13 @@ function Registration() {
           value={password}
           onChange={e => setPassword(e.target.value)}
           placeholder="Password"
+        />
+        <input
+          type="password"
+          className="register__textBox"
+          value={confirmPassword}
+          onChange={e => setConfirmPassword(e.target.value)}
+          placeholder="Confirm Password"
         />
         <button className="register__btn btn btn-primary" onClick={register}>
           Register
