@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import {
@@ -10,7 +9,7 @@ import { useAuthState } from 'react-firebase-hooks/auth'
 import './Login.css'
 import Logo from '../../assets/googlelogo.svg'
 
-function Login() {
+function Login({ setShowLogin }) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [user, loading] = useAuthState(auth)
@@ -67,13 +66,14 @@ function Login() {
           onClick={logGoogleUser}
         >
           Continue with
-          <img className="login-btn-google-icon" src={Logo} />
+          <img className="login-btn-google-icon" src={Logo} alt="Google" />
         </button>
         <div>
           <Link to="/reset-password">Forgot Password</Link>
         </div>
         <div>
-          Don't have an account? <Link to="/registration">Register</Link> now.
+          Don't have an account?{' '}
+          <Link onClick={() => setShowLogin(false)}>Register</Link> now.
         </div>
         {loginSuccess &&
           <p className="alert alert-success">Successfully Login</p>}

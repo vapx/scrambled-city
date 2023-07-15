@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { auth, registerWithEmailAndPassword } from '../../config/firebase'
 import './Registration.css'
 
-function Registration() {
+function Registration({ setShowLogin }) {
   const navigate = useNavigate()
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
@@ -61,7 +61,11 @@ function Registration() {
           Register
         </button>
         <div>
-          Already have an account? <Link to="/">Login</Link> now.
+          Already have an account?{' '}
+          <Link to="/" onClick={() => setShowLogin(true)}>
+            Login
+          </Link>{' '}
+          now.
         </div>
       </div>
     </div>
